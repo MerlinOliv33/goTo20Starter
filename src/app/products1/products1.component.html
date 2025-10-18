@@ -1,0 +1,24 @@
+<h1>Exercice - Nouveau control flow</h1>
+
+<div class="row">
+  @for (product of products; track product.id) {
+  <!-- <p class="bold">{{ product.id }} - {{ product.label }}</p> -->
+  <div class="col-4 bold mb-8">{{ product.id }} - {{ product.label }}</div>
+  @if(product.quantity == 0) {
+  <p class="red">Le produit est en rupture de stock</p>
+  } @else if (product.quantity > 0 && product.quantity <= 3) {
+  <p class="yellow">il ne reste que {{ product.quantity }} produits en vente</p>
+  } @else if (product.discount > 0) {
+  <p>
+    <del>{{ product.price }} €</del>
+    <span>
+      => {{ product.price - (product.price * product.discount) / 100 }} €
+    </span>
+  </p>
+  } @else {
+  <p>{{ product.price }} €</p>
+
+  } } @empty {
+  <p class="mt-8">Le magasin est vide</p>
+  }
+</div>

@@ -7,7 +7,7 @@ import { OperationComponent } from './components/operation/operation.component';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [NavbarComponent, RouterOutlet, OperationComponent],
+  imports: [NavbarComponent, RouterOutlet],
 })
 export class AppComponent {
   // appRef = inject(ApplicationRef);

@@ -1,3 +1,20 @@
+.bold {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.yellow {
+  background-color: #d8d866;
+}
+
+.red {
+  background-color: #d98b8b;
+}
+
 .mt-8 {
   margin-top: 8px;
 }
