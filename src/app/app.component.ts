@@ -1,12 +1,13 @@
-import { ApplicationRef, Component, inject } from "@angular/core";
-import { NavbarComponent } from "./components/navbar/navbar.component";
-import { RouterOutlet } from "@angular/router";
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { OperationComponent } from './components/operation/operation.component';
 
 @Component({
-    selector: "app-root",
-    templateUrl: "./app.component.html",
-    styleUrls: ["./app.component.css"],
-    imports: [NavbarComponent, RouterOutlet]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css'],
+  imports: [NavbarComponent, RouterOutlet, OperationComponent],
 })
 export class AppComponent {
   // appRef = inject(ApplicationRef);
