@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { User } from '../users.service';
+import { FiboPipe } from '../../pipes/fibo.pipe';
 
 
 
@@ -9,7 +10,7 @@ import { User } from '../users.service';
     templateUrl: './user-elements.component.html',
     styleUrls: ['./user-elements.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: false
+    imports: [FiboPipe]
 })
 export class UserElementsComponent {
   @Input() users: User[] = [];
